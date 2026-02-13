@@ -1,0 +1,35 @@
+Commands:
+
+Build CSS once:
+npm run build:css
+
+Watch and rebuild on changes:
+npm run watch:css
+
+How to add Tailwind to any other folder
+Go to the project folder
+   cd path/to/your/folder
+
+Create package.json (if it doesn’t exist)
+   npm init -y
+
+Install Tailwind
+   npm install -D tailwindcss
+Create config
+
+   npx tailwindcss init
+
+Set content in tailwind.config.js
+   module.exports = {     content: ["./*.html", "./**/*.html", "./*.js", "./**/*.js"],  // adjust to your files     theme: { extend: {} },     plugins: [],   };
+Add source CSS (e.g. input.css)
+   @tailwind base;   @tailwind components;   @tailwind utilities;
+Add scripts in package.json
+   "scripts": {     "build:css": "tailwindcss -i input.css -o your-output.css",     "watch:css": "tailwindcss -i input.css -o your-output.css --watch"   }
+
+Build
+   npm run build:css
+   
+In HTML, link the output file (e.g. your-output.css), not input.css.
+Quick option (no build): in any HTML file you can use the Play CDN once:
+<script src="https://cdn.tailwindcss.com"></script>
+That loads Tailwind from the CDN with no npm or build step; fine for quick tests, not ideal for production.
