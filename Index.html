@@ -5,13 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver NAV</title>
     <link rel="stylesheet" href="Styl.css">
+    <link rel="stylesheet" href="MainStylsheet.css">
     <link rel="stylesheet" href="output.css">
 
 </head>
-<body>
+    <body class="bg-[#1a1a1a] text-white h-[100vh]">
 
-    
-    <p class="text-center text-blue-600 text-2xl font-semibold">HELLO, DRIVE NAV</p>
+    <!--This wrapps everything-->
+  <div class="Container">
+
+    <!--Header with the Buttons-->
+    <header class="Buttons bg-[#667eea] p-[1rm,2rm] flex justify-center items-center">
+        <h1 class=" text-blue-600 text-[1.8rm]">Drive-NAV</h1>
+        <div class="controls p-[0.6rm,1.2rm] border-none rounded-lg bg-[#4CAF50] cursor-pointer text-base hover:bg-[#3f7e42]">
+            <button id="startCamera">Start Camera</button>
+            <button id="stopCamera">Stop Camera</button>
+        </div>
+    </header>
+
+    <!--Main Content Area-->
+    <div class="Main-content flex-1 relative">
+        <!--Camera View-->
+        <div id="camerView" class="view">
+            <video id="videoElement" class="w-full h-full object-cover"auto playsinline></video>
+        </div>
+    </div>
+
+<!--Statuse bar at the buttom-->
+<div class="status-bar bg-[#363636] p-[0.8rm,2rm]">
+    <span id="statuse-text">READY</span>
+</div>
+
+  </div>
+
     <script src="App.js"></script>
 </body>
 </html>
