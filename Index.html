@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="Styl.css">
     <link rel="stylesheet" href="MainStylsheet.css">
     <link rel="stylesheet" href="output.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Oswald&family=Gravitas One&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    
 </head>
     <body class="bg-[#1a1a1a] text-white h-[100vh]">
 
@@ -15,11 +19,25 @@
   <div class="Container">
 
     <!--Header with the Buttons-->
-    <header class="Buttons bg-[#667eea] p-[1rm,2rm] flex justify-center items-center">
-        <h1 class=" text-blue-600 text-[1.8rm]">Drive-NAV</h1>
-        <div class="controls p-[0.6rm,1.2rm] border-none rounded-lg bg-[#4CAF50] cursor-pointer text-base hover:bg-[#3f7e42]">
-            <button id="startCamera">Start Camera</button>
-            <button id="stopCamera">Stop Camera</button>
+    <header class="Buttons">
+        <div class="container rounded-lg bg-[#010301] p-[1rm,2rm] justify-center items-center">
+            <div class="flex flex-row justify-center items-center ">
+
+            <h1 class=" text-[#c0c4d3] text-2xl ml-6 mr-3"><b>Drive-NAV</b></h1>
+
+            <div class="controls mr-6">
+                <ul class=" flex flex-row gap-4">
+                    <li>
+                        <button id="startCamera" class="p-[0.6rm,1.2rm] border-none rounded-lg bg-[#2fa12f] cursor-pointer text-base hover:bg-[#3f7e42]">Start Camera</button>
+                    </li>
+        
+                    <li>
+                        <button id="stopCamera" class="p-[0.6rm,1.2rm] border-none rounded-lg bg-[#fd2727] cursor-pointer text-base hover:bg-[#af2525] gap-5">Stop Camera</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
         </div>
     </header>
 
