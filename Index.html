@@ -20,7 +20,7 @@
 
     <!--Header with the Buttons-->
     <header class="Buttons">
-        <div class="container rounded-lg bg-[#010301] p-[1rm,2rm]">
+        <div class="container rounded-lg bg-[#010301] p-4">
             <div class="flex flex-row justify-between items-center w-full">
 
             <h1 class=" text-[#c0c4d3] text-2xl ml-6 mr-3"><b>Drive-NAV</b></h1>
@@ -28,11 +28,11 @@
             <div class="controls">
                 <ul class=" flex flex-row gap-4 ">
                     <li>
-                        <button id="startCamera" class="p-[0.6rm,1.2rm] border-none rounded-lg bg-[#2fa12f] cursor-pointer text-base hover:bg-[#3f7e42]">Start Camera</button>
+                        <button id="startCamera" class="px-3 py-1.5 border-none rounded-lg bg-[#2fa12f] cursor-pointer text-base hover:bg-[#3f7e42]">Start Camera</button>
                     </li>
         
                     <li>
-                        <button id="stopCamera" class="p-[0.6rm,1.2rm] border-none rounded-lg bg-[#fd2727] cursor-pointer text-base hover:bg-[#af2525] gap-5">Stop Camera</button>
+                        <button id="stopCamera" class="px-3 py-1.5 border-none rounded-lg bg-[#fd2727] cursor-pointer text-base hover:bg-[#af2525] gap-5">Stop Camera</button>
                     </li>
                 </ul>
             </div>
@@ -45,13 +45,13 @@
     <div class="Main-content flex-1 relative">
         <!--Camera View-->
         <div id="camerView" class="view">
-            <video id="videoElement" class="w-full h-full object-cover"auto playsinline></video>
+            <video id="videoElement" class="w-full h-full object-cover" autoplay playsinline></video>
         </div>
     </div>
 
 <!--Statuse bar at the buttom-->
-<div class="status-bar bg-[#363636] p-[0.8rm,2rm]">
-    <span id="statuse-text">READY</span>
+<div class="status-bar bg-[#363636] px-4 py-2">
+    <span id="statusText">READY</span>
 </div>
 
   </div>

@@ -600,10 +600,6 @@ video {
   margin-right: 0.75rem;
 }
 
-.mr-6 {
-  margin-right: 1.5rem;
-}
-
 .flex {
   display: flex;
 }
@@ -634,10 +630,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .justify-between {
@@ -690,20 +682,28 @@ video {
      object-fit: cover;
 }
 
-.p-\[0\.6rm\2c 1\.2rm\] {
-  padding: 0.6rm,1.2rm;
+.p-4 {
+  padding: 1rem;
 }
 
-.p-\[0\.8rm\2c 2rm\] {
-  padding: 0.8rm,2rm;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
-.p-\[1rm\2c 2rm\] {
-  padding: 1rm,2rm;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.text-right {
-  text-align: right;
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .text-2xl {
