@@ -77,6 +77,12 @@ function stopCamera(){
         //to clear the video
         const video = document.getElementById('videoElement');
         video.srcObject = null;
+
+        //to clear the overlay canvas
+        const canvas = document.getElementById('overLayCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
         updateStatus('Camera Stopped!');
     }
 }
