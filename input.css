@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-    .container {
+    .Container1 {
         width: 100%;
         max-width: 1200px;
         margin-inline: auto;
