@@ -1,8 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Full-height column layout so header, main, and status bar align the same in all browsers */
+.Container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+/* Keep status bar at bottom and prevent it from shrinking */
+.status-bar {
+    flex-shrink: 0;
+}
+
 body{
     font-family: arial, sans-serif;
 }

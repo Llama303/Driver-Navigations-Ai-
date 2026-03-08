@@ -14,13 +14,14 @@
 </head>
 <body class="bg-[#1a1a1a] text-white flex items-center justify-center h-[100vh]">
 
-    <div class="container rounded-lg bg-[#010301] p-4 flex flex-col items-center justify-center list-none w-fit">
-        <h1 class="text-2xl font-bold">Log In</h1>
+    <div class="container rounded-lg bg-[#010301] p-4 flex flex-col items-center justify-center w-96 h-96">
+        <h1 class="text-2xl font-bold cursor-default mb-3">Drive-NAV</h1>
+        <h1 class="text-2xl font-bold cursor-default mb-9">Log In</h1>
 
-    <form action="Login.PHP" method="post">
-        <input type="text" placeholder="Username" name="username" id="username"> <br>
-        <input type="password" placeholder="Password" name="password" id="password">
-        <button type="submit" name="login" id="login">Log In</button>
+    <form action="Login.PHP" method="post" class="text-[#000000] space-y-3">
+        <input type="text" placeholder="Username" name="username" id="username" class="w-full p-2 rounded-lg"> <br>
+        <input type="password" placeholder="Password" name="password" id="password" class="w-full p-2 rounded-lg">
+        <button type="submit" name="login" id="login" class="w-full text-white bg-[#2fa12f] hover:bg-[#3f7e42] rounded-lg p-2">Log In</button>
     </form>
     </div>
 
