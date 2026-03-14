@@ -10,26 +10,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
 </head>
-<body class="bg-[#0f0f0f] text-white flex items-center justify-center h-[100vh]">
+<body class="themeable bg-[#0f0f0f] text-white flex items-center justify-center h-[100vh]">
 
-    <div class="container rounded-lg bg-[#010301] p-4 flex flex-col items-center justify-center w-96">
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+        <span class="icon-sun" aria-hidden="true">☀</span>
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+    </button>
+
+    <div class="auth-card container rounded-lg bg-[#010301] p-6 flex flex-col items-center justify-center w-96 max-w-[90vw] shadow-xl border border-[#1a2a1a]">
         <h1 class="text-2xl font-bold cursor-default mb-3">Drive-NAV</h1>
         <h1 class="text-2xl font-bold cursor-default mb-9">Sign Up</h1>
 
-    <form action="Login.PHP" method="post" class="text-[#000000] space-y-3">
-        <input type="text" placeholder="What do we call you" name="Username" class="w-full p-2 rounded-lg "> 
+    <div id="signup-error" class="auth-error text-sm text-center min-h-[1.25rem] mb-2" aria-live="polite" role="alert"></div>
+    <div id="signup-success" class="text-[#2fa12f] text-sm text-center min-h-[1.25rem] mb-2" aria-live="polite"></div>
 
-        <input type="email" placeholder="Enter Email" name="email" required class="w-full p-2 rounded-lg"> 
-<h9></h9>
-        <input type="password" placeholder="Enter Password" name="psw" required class="w-full p-2 rounded-lg">
-
-        <input type="password" placeholder="Confirm Password" name="cfmpsw" required class="w-full p-2 rounded-lg">
-
-        <button type="submit" name="Sign Up" id="signup" class="w-full bg-[#2fa12f] hover:bg-[#3f7e42] rounded-lg p-2">
-            Sign Up?</button>
+    <form action="SignUp.PHP" method="post" class="text-[#000000] space-y-3 w-full">
+        <input type="text" placeholder="Username (2–50 characters)" name="username" id="signup-username" required minlength="2" maxlength="50" class="w-full p-2 rounded-lg focus:ring-2 focus:ring-[#2fa12f] focus:outline-none">
+        <input type="email" placeholder="Email" name="email" id="signup-email" required class="w-full p-2 rounded-lg focus:ring-2 focus:ring-[#2fa12f] focus:outline-none">
+        <input type="password" placeholder="Password (min 8 characters)" name="psw" id="signup-psw" required minlength="8" class="w-full p-2 rounded-lg focus:ring-2 focus:ring-[#2fa12f] focus:outline-none">
+        <input type="password" placeholder="Confirm password" name="cfmpsw" id="signup-cfmpsw" required minlength="8" class="w-full p-2 rounded-lg focus:ring-2 focus:ring-[#2fa12f] focus:outline-none">
+        <button type="submit" name="signup" id="signup" value="1" class="w-full text-white bg-[#2fa12f] hover:bg-[#3f7e42] rounded-lg p-2.5 font-medium focus:ring-2 focus:ring-[#2fa12f] focus:outline-none transition-colors">Sign Up</button>
     </form>
-    <h2 class="cursor-default mt-3">Already signed up?</h2><a href="LogInPage.html" class="text-white hover:text-[#2fa12f] ">> Log In <</a>
+    <p class="auth-text-subtle cursor-default mt-4 text-sm">Already signed up? <a href="LogInPage.html" class="font-medium">Log In</a></p>
     </div>
+    <script src="theme.js"></script>
+    <script src="SignUp.js"></script>
 </body>
 </html>
